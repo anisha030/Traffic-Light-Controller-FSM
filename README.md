@@ -152,6 +152,22 @@ Traffic-Light-Controller-FSM/
 
 ---
 
+## 🚀 Future Scope
+
+- 🚗 Vehicle Detection Sensors
+- 🚑 Emergency Vehicle Priority
+- 🚶 Pedestrian Crossing Support
+- 💻 FPGA Implementation
+- 🤖 AI-Based Smart Traffic Management System
+
+---
+
+## 📄 License
+
+This project is intended for **educational and learning purposes**.
+
+---
+
 <p align="center">
 ⭐ If you found this project helpful, consider giving it a star!
 </p>
