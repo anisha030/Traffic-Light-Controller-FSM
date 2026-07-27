@@ -109,7 +109,7 @@ The project successfully demonstrates:
 ## Moore FSM State Diagram
 
 <p align="center">
-<img src="Screenshots/Moore_State_Diagram.png" width="800">
+<img src='/Users/anishaboken/Downloads/Screenshots /Moore FSM State Diagram.png' width="800">
 </p>
 
 ---
