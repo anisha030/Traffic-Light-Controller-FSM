@@ -1,10 +1,10 @@
-# 🚦 Traffic Light Controller using Moore & Mealy FSM
+# 🚦 Traffic Light Controller using Moore & Mealy Finite State Machines (FSM)
 
 <p align="center">
 
 ![Verilog](https://img.shields.io/badge/Language-Verilog-blue)
-![RTL Design](https://img.shields.io/badge/Domain-RTL%20Design-success)
-![FSM](https://img.shields.io/badge/FSM-Moore%20%26%20Mealy-orange)
+![EDA Playground](https://img.shields.io/badge/Simulation-EDA%20Playground-success)
+![RTL Design](https://img.shields.io/badge/Domain-RTL%20Design-orange)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 </p>
@@ -13,20 +13,25 @@
 
 ## 📖 Project Overview
 
-This project implements a **Traffic Light Controller** using **Finite State Machines (FSM)** in **Verilog HDL**. Two FSM models—**Moore FSM** and **Mealy FSM**—are designed, simulated, and compared to understand their behavior, timing characteristics, and implementation differences.
+This project presents the design and implementation of a **Traffic Light Controller** using **Finite State Machines (FSM)** in **Verilog HDL**. The controller regulates traffic at a four-way intersection by controlling the **North–South** and **East–West** traffic signals.
 
-The controller manages traffic at a four-way intersection by controlling the **North–South** and **East–West** traffic signals while ensuring safe and efficient signal transitions.
+The project implements and compares two FSM architectures:
+
+- 🚦 **Moore FSM**
+- ⚡ **Mealy FSM**
+
+Both implementations were simulated using **EDA Playground**, waveform outputs were analysed using **EPWave**, and the designs were synthesized and evaluated using **Cadence Genus** and **Cadence Innovus**.
 
 ---
 
 ## 🎯 Objectives
 
 - Design a Traffic Light Controller using Verilog HDL.
-- Implement both Moore and Mealy FSM architectures.
-- Simulate the designs using testbenches.
+- Implement Moore and Mealy FSM architectures.
+- Simulate both designs using Verilog testbenches.
 - Analyse waveform outputs.
-- Compare the performance and behavior of both FSM models.
-- Understand the differences between fixed and adaptive state machines.
+- Compare Moore and Mealy FSM performance.
+- Understand differences in state-dependent and input-dependent outputs.
 
 ---
 
@@ -36,22 +41,23 @@ The controller manages traffic at a four-way intersection by controlling the **N
 |-------------------|---------|
 | **Verilog HDL** | Hardware Description Language |
 | **EDA Playground** | Writing and simulating Verilog code |
-| **EPWave** | Waveform visualization |
-| **Cadence Genus** | Logic synthesis |
-| **Cadence Innovus** | Physical design implementation |
-| **Finite State Machine (FSM)** | Sequential circuit design |
+| **EPWave** | Waveform Visualization |
+| **Cadence Genus** | Logic Synthesis |
+| **Cadence Innovus** | Physical Design |
+| **Finite State Machine (FSM)** | Sequential Circuit Design |
 
 ---
 
 ## ✨ Features
 
-- 🚦 Traffic Light Controller for a four-way intersection
-- 🔄 Moore FSM implementation
-- ⚡ Mealy FSM implementation
-- 🧪 Verilog testbenches
-- 📈 Waveform analysis using EPWave
-- 📊 Performance comparison of Moore and Mealy FSM
-- 🏗️ RTL Design and Physical Design Flow
+- 🚦 Four-Way Traffic Light Controller
+- 🔄 Moore FSM Implementation
+- ⚡ Mealy FSM Implementation
+- 🧪 Verilog Testbenches
+- 📈 Waveform Analysis
+- 🏗️ RTL Design
+- 📊 Physical Design Flow
+- 📋 Performance Comparison
 
 ---
 
@@ -61,155 +67,179 @@ The controller manages traffic at a four-way intersection by controlling the **N
 Traffic-Light-Controller-FSM/
 │
 ├── Moore_FSM.v
-├── Mealy_FSM.v
 ├── Moore_Testbench.v
+├── Mealy_FSM.v
 ├── Mealy_Testbench.v
 ├── README.md
 ├── Requirements.md
 └── Screenshots/
+    ├── Moore FSM State Diagram.png
+    ├── Mealy FSM State Diagram.png
+    ├── Moore Waveform.png
+    ├── Mealy Waveform.png
+    ├── Post Synthesis Circuit (Moore).png
+    ├── Post Synthesis Circuit (Mealy).png
+    ├── Floorplan.png
+    ├── Placement.png
+    ├── Clock Tree Synthesis.png
+    ├── Routing.png
+    ├── Area Report.png
+    ├── Power Report.png
+    ├── Timing Report.png
+    └── Final Comparison Graphs.png
 ```
 
 ---
 
-# 🚥 Moore FSM
+## 🚥 Moore FSM
 
-- Outputs depend only on the current state.
+- Output depends only on the current state.
 - Fixed timing for traffic signal transitions.
-- Stable and glitch-free operation.
-- Simple and reliable implementation.
+- Stable and reliable design.
+- Simple implementation.
 
 ---
 
-# 🚥 Mealy FSM
+## 🚥 Mealy FSM
 
-- Outputs depend on both the current state and sensor inputs.
-- Adaptive traffic signal timing.
+- Output depends on the current state and input.
 - Faster response to changing traffic conditions.
-- More efficient in dynamic situations.
-
----
-
-# 📊 Simulation Results
-
-The project successfully demonstrates:
-
-- ✅ Correct traffic signal sequencing
-- ✅ State transitions
-- ✅ Moore FSM simulation
-- ✅ Mealy FSM simulation
-- ✅ Waveform verification
-- ✅ RTL implementation
-- ✅ Physical Design Flow
-- ✅ Comparative analysis between Moore and Mealy FSM
+- Adaptive signal behaviour.
+- Efficient implementation.
 
 ---
 
 # 📸 Project Screenshots
 
-## Moore FSM State Diagram
+## FSM State Diagrams
 
 <p align="center">
-<img src='/Users/anishaboken/Downloads/Screenshots /Moore FSM State Diagram.png' width="800">
+<img src="Screenshots/Moore FSM State Diagram.png" width="48%">
+<img src="Screenshots/Mealy FSM State Diagram.png" width="48%">
 </p>
 
 ---
 
-## Mealy FSM State Diagram
+## Simulation Waveforms
 
 <p align="center">
-<img src="Screenshots/Mealy_State_Diagram.png" width="800">
+<img src="Screenshots/Moore Waveform.png" width="48%">
+<img src="Screenshots/Mealy Waveform.png" width="48%">
 </p>
 
 ---
 
-## Moore FSM Waveform
+## Post Synthesis Circuits
 
 <p align="center">
-<img src="Screenshots/Moore_Waveform.png" width="800">
+<img src="Screenshots/Post Synthesis Circuit (Moore).png" width="48%">
+<img src="Screenshots/Post Synthesis Circuit (Mealy).png" width="48%">
 </p>
 
 ---
 
-## Mealy FSM Waveform
-
-<p align="center">
-<img src="Screenshots/Mealy_Waveform.png" width="800">
-</p>
-
----
-
-## Physical Design
+## Physical Design Flow
 
 ### Floorplan
 
 <p align="center">
-<img src="Screenshots/Floorplan.png" width="800">
+<img src="Screenshots/Floorplan.png" width="80%">
 </p>
 
 ### Placement
 
 <p align="center">
-<img src="Screenshots/Placement.png" width="800">
+<img src="Screenshots/Placement.png" width="80%">
 </p>
 
-### Clock Tree
+### Clock Tree Synthesis
 
 <p align="center">
-<img src="Screenshots/Clock_Tree.png" width="800">
+<img src="Screenshots/Clock Tree Synthesis.png" width="80%">
 </p>
 
 ### Routing
 
 <p align="center">
-<img src="Screenshots/Routing.png" width="800">
+<img src="Screenshots/Routing.png" width="80%">
 </p>
 
 ---
 
-## 📈 Performance Reports
+## Performance Reports
 
 ### Area Report
 
 <p align="center">
-<img src="Screenshots/Area_Report.png" width="800">
+<img src="Screenshots/Area Report.png" width="80%">
 </p>
 
 ### Power Report
 
 <p align="center">
-<img src="Screenshots/Power_Report.png" width="800">
+<img src="Screenshots/Power Report.png" width="80%">
 </p>
 
 ### Timing Report
 
 <p align="center">
-<img src="Screenshots/Timing_Report.png" width="800">
+<img src="Screenshots/Timing Report.png" width="80%">
 </p>
 
 ---
 
-# 📋 Moore vs Mealy Comparison
+## Final Comparison
+
+<p align="center">
+<img src="Screenshots/Final Comparison Graphs.png" width="80%">
+</p>
+
+---
+
+## 📊 Moore vs Mealy Comparison
 
 | Feature | Moore FSM | Mealy FSM |
 |---------|-----------|-----------|
-| Output Dependency | Current State | Current State + Inputs |
+| Output Dependency | Current State | Current State + Input |
+| Response Speed | Moderate | Faster |
 | Timing | Fixed | Adaptive |
 | Complexity | Low | Moderate |
-| Response Speed | Moderate | Fast |
 | Stability | High | High |
 
 ---
 
-# 🚀 Future Enhancements
+## 📈 Results
+
+The project successfully demonstrates:
+
+- ✅ Correct traffic signal sequencing
+- ✅ Accurate state transitions
+- ✅ Successful waveform verification
+- ✅ RTL implementation
+- ✅ Logic synthesis
+- ✅ Physical design implementation
+- ✅ Comparative analysis of Moore and Mealy FSM
+
+---
+
+## 🚀 Future Scope
 
 - 🚗 Vehicle Detection Sensors
-- 🚑 Emergency Vehicle Priority
 - 🚶 Pedestrian Crossing Support
+- 🚑 Emergency Vehicle Priority
 - 💻 FPGA Implementation
-- 🤖 AI-based Smart Traffic Management
+- 🤖 Smart Traffic Management System
+
+---
+
+## 👩‍💻 Contributors
+
+- **Anisha Boken**
+- **Ananya Kaushik**
+- **Anvi Munjal**
 
 ---
 
 ## ⭐ Support
 
-If you found this project helpful, consider giving it a ⭐ on GitHub!
+If you found this project helpful, please consider giving it a ⭐ on GitHub!
